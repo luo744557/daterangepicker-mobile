@@ -15,3 +15,4 @@
 其他参数请参考原插件作者的说明，移步GitHub地址：https://github.com/longbill/jquery-date-range-picker  即可，我就不多说啦！
 
 菜鸟一枚，这是我的第一个GitHub开源项目，请多包涵。
+

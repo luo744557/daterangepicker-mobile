@@ -1,0 +1,22 @@
+﻿*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	border:0;
+	font-family:'微软雅黑';
+}
+body{
+	width:100%;
+	margin:0 auto;
+	overflow:scroll;
+	-webkit-overflow-scrolling:touch;
+}
+a,h1,h2,h3,h4,h5,h6,label {
+	text-shadow: none;
+	font-weight: normal;
+}
+input[type=button],input[type=text],input[type=number],input[type=file]{
+	-webkit-appearance:none;
+	outline:none;
+	border: 0;
+}

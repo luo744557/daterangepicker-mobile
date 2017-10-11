@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>日期范围选择控件手机版</title>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=750,user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/jq.daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+</head>
+    <body>
+      <div data-role="page" id="MultiStore" >
+        <div class="header">
+        </div>
+        
+        <div class="container">
+           <div class="time item">
+              <div class="livein inline">
+                  <h4>入住日期</h4>
+                  <h6><i class="date_in" >09-01</i><span class="week_in" ></span></h6>
+                  <input id="date_range_start" type="text" name="" data-role="none">
+              </div>
+              <div class="days all_day inline">
+                  <h5>共<span class="days_number">1</span>晚</h5>
+              </div>
+              <div class="liveout inline">
+                  <h4>离店日期</h4>
+                  <h6><i class="date_out" >09-02</i><span class="week_out" ></span></h6>
+                  <input id="date_range_end" type="text" name="" data-role="none">
+              </div>
+           </div>
+        </div>
+
+      </div>
+
+      
+      <script type="text/javascript" src="js/jquery.min.js">              </script>
+      <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+      <script type="text/javascript" src="js/moment.min.js">              </script>
+      <script type="text/javascript" src="js/daterangepicker.js"></script>
+      
+      <script type="text/javascript">
+    	  var systemtime  = "2017/08/10";
+          var _systemmonth= systemtime.split("/")[1];
+          var _systemday  = systemtime.split("/")[2];
+          var _month      = parseInt(_systemmonth);
+          var systemday   = parseInt(_systemday);
+          var _startdate , enddate , _endday;
+      
+          var systemmonth ;
+          if ( _month < 10 ) {systemmonth = "0" + _systemmonth;}else {systemmonth = _systemmonth;}
+          
+          _startdate = "2017/08/10"; enddate = "2017/09/11"; _endday = "2017/08/11";
+          console.log( _startdate , _endday );
+          var datemonth_s = _startdate.split("/")[1] , dateday_s = _startdate.split("/")[2];
+          var datemonth_e = _endday.split("/")[1] , dateday_e = _endday.split("/")[2];
+          
+          //计算周几
+	      var w_month_s = parseInt(datemonth_s)-1;
+	      var w_month_e = parseInt(datemonth_e)-1;
+		  var dt_s = new Date(_startdate.split("/")[0], w_month_s, dateday_s);
+		  var dt_e = new Date(_endday.split("/")[0], w_month_e, dateday_e);
+		  var weekDay = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+		  var week_s = weekDay[dt_s.getDay()];
+		  var week_e = weekDay[dt_e.getDay()];
+          		  
+          $(".date_in").text(datemonth_s +'-'+ dateday_s +'');
+          $(".date_out").text(datemonth_e +'-'+ dateday_e +'');
+          $(".week_in").text(week_s);
+          $(".week_out").text(week_e);
+          
+          $("#date_range_start").val(_startdate);
+          $("#date_range_end").val(_endday);
+          
+          var _s_date = _startdate.split("/"), _e_date = _endday.split("/");
+          _startdate  = parseInt(_s_date[0])+"/"+parseInt(_s_date[1])+"/"+parseInt(_s_date[2]);
+          _endday     = parseInt(_e_date[0])+"/"+parseInt(_e_date[1])+"/"+parseInt(_e_date[2]);
+
+          $('.time').dateRangePicker( {
+              autoClose: true,
+              startDate: _startdate,
+              endDate: enddate,
+              separator : ' to ',
+              getValue: function() {
+                  if ($('#date_range_start').val() && $('#date_range_end').val() )
+                      return $('#date_range_start').val() + ' to ' + $('#date_range_end').val();
+                  else
+                      return '';
+              },
+              setValue: function(s,s1,s2) {
+                  $('#date_range_start').val(s1);
+                  $('#date_range_end').val(s2);
+
+                  $("body,html").css("position","fixed");
+                  $(".date_all_container").css("position","absolute");
+              }
+          });
+
+	      function doHandleMonth(month){  
+	          var m = month;  
+	          if(month.toString().length == 1){  
+	             m = "0" + month;  
+	          }  
+	          return m;  
+	      }
+         	
+    </script>
+    
+ </body>
+ </html>

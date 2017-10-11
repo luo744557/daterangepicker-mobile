@@ -1,0 +1,331 @@
+.date-picker
+{
+	width:170px;
+	height:25px;
+	padding:0;
+	border:0;
+	line-height:25px;
+	padding-left:10px;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:bold;
+	cursor:pointer;
+	color:#303030;
+	position:relative;
+	z-index:2;
+}
+.date-picker-wrapper {
+	position:fixed;
+	z-index:99999;
+	bottom: 128px;
+	background-color: #fff;
+	width:100vw;
+	padding: 0;
+	font-size:16px;
+	line-height:20px;
+	font-family:'΢���ź�';
+	color: #666666;
+}
+.daterange_result .time_livein , .daterange_result .all_time , .daterange_result .time_liveout {
+	margin-bottom: 4px;
+}
+.daterange_result table  {
+	width: 100vw;
+	height: 30px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 25px;
+	border-top: 1px solid rgba(214,214,214,0.6);
+}
+.daterange_result table thead .week-name {
+	border-bottom: 1px solid rgba(214,214,214,0.6);
+}
+.daterange_result table thead tr th {
+	font-weight: 400 !important;
+}
+.date-picker-wrapper .week-name ,
+.date-picker-wrapper tbody tr {
+	border-bottom: 25px solid rgba(212,212,212,0);
+	border-top: 25px solid rgba(212,212,212,0);
+}
+.date-picker-wrapper.single-date {
+	width:auto;
+}
+.date-picker-wrapper.no-shortcuts { padding-bottom:12px;}
+.my_footer {
+	position: fixed;
+	z-index: 99999;
+	bottom: 0px;
+	width: 100vw;
+	background-color: #ffffff;
+	height: 128px;
+	border-top: 1px solid #dddddd;
+}
+.my_footer a {
+	margin:20px auto;
+	width: 620px;
+	line-height: 46px;
+	background-color: #ff7d01;
+	text-shadow: none;
+	color: #ffffff;
+	border:none;
+	font-size: 30px;
+	font-weight: 400;
+}
+.date-picker-wrapper b {
+	color:#666;
+	font-weight:700;
+}
+.date-picker-wrapper a {
+	color: rgb(107, 180, 214);
+}
+.date-picker-wrapper .month-name {
+  font-size: 26px !important;
+  font-weight: 400 !important;
+  color: #333 !important;
+  text-transform: uppercase;
+}
+.date-picker-wrapper .month-wrapper
+{
+/* 	border:1px solid #bfbfbf; */
+/* 	border-radius:3px; */
+	background-color:#fff;
+	cursor:default;
+	position:relative;
+	_overflow:hidden;
+/* 	margin-top: 60px; */
+}
+.date-picker-wrapper .month-wrapper table {
+	width: 100%;
+}
+.date-picker-wrapper .month-wrapper table.month2 {
+	width: 100%;
+}
+.date-picker-wrapper .month-wrapper table.month1 {
+	border-bottom: 1px solid rgba(214,214,214,0.6);
+}
+.date-picker-wrapper .month-wrapper table.month1 .lastMonth ,
+.date-picker-wrapper .month-wrapper table.month1 .nextMonth ,
+.date-picker-wrapper .month-wrapper table.month2 .lastMonth ,
+.date-picker-wrapper .month-wrapper table.month2 .nextMonth {
+	display: none;
+}
+.date-picker-wrapper .month-wrapper table.month1 .week-name ,
+.date-picker-wrapper .month-wrapper table.month2 .week-name {
+	display: none;
+}
+.date-picker-wrapper .month-wrapper table th,
+.date-picker-wrapper .month-wrapper table td  {
+	vertical-align:middle;
+	text-align:center;
+	line-height: 92px;
+	font-size: 22px;
+	margin : 0px;
+	padding : 0px;
+	height: 92px;
+	width: 14.3vw;
+	font-weight: 400;
+	margin-bottom: 50px;
+	color: #666666;
+}
+.date-picker-wrapper .month-wrapper table .week-name {
+	vertical-align:middle;
+	text-align:center;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 88px;
+	margin : 0px;
+	padding : 0px;
+	height: 88px;
+	width: 14.3vw;
+}
+.date-picker-wrapper .month-wrapper table .day
+{
+	height:92px;
+	line-height:92px;
+	font-size: 26px;
+	color:#999999;
+	cursor:default;
+}
+.date-picker-wrapper .month-wrapper table div.day.lastMonth,
+.date-picker-wrapper .month-wrapper table div.day.nextMonth {
+	line-height: 50px;
+	height: 100%;
+	color:#999;
+	cursor:default;
+	text-shadow: none;
+}
+.date-picker-wrapper .month-wrapper table .live_in_day {
+	background-color: #ff7d01 !important;
+}
+.date-picker-wrapper .month-wrapper table .day.checked {
+	height: 50px;
+}
+.date-picker-wrapper .month-wrapper table .day.checked {
+	color: #ffffff !important;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 64px;
+	background-image: url("../image/livein.png");
+	background-position: center;
+}
+.date-picker-wrapper .month-wrapper table .day.fontcolor {
+	
+}
+.date-picker-wrapper .month-wrapper table .day.live_in_day {
+	color: #ffffff !important;
+}
+.date-picker-wrapper .month-wrapper thead .week-name ,
+.date-picker-wrapper .month-wrapper table .week-name {
+	height:14px;
+	line-height:14px;
+	font-size: 12px;
+	font-weight:100;
+    text-transform: uppercase;
+    border: none !important;
+}
+.date-picker-wrapper .month-wrapper table .week-name th {
+	height: 88px;
+}
+.date-picker-wrapper .month-wrapper table .day.has-tooltip { cursor:help !important;}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid {
+	line-height: 92px;
+	height: 100%;
+	color:#333333;
+	cursor:pointer;
+	text-shadow: none;
+}
+
+.date-picker-wrapper .month-wrapper table .day .real-today { background-color: rgb(255, 230, 132); }
+.date-picker-wrapper .month-wrapper table .day .real-today .checked {text-shadow: none; }
+
+.date-picker-wrapper table .caption {
+	height:92px;
+	background-color: #f2f2f2;
+}
+.date-picker-wrapper .month1 thead {
+	height: 92px;
+}
+.month1 thead .caption th {
+	line-height: 92px;
+	font-size: 26px;
+	color: #333333;
+}
+.month2 thead .caption th {
+	margin-top: 10px;
+	line-height: 30px;
+	height: 40px;
+}
+.date-picker-wrapper table .caption .next ,
+.date-picker-wrapper table .caption .prev {
+	display: none;
+	padding:0 5px;
+	cursor:pointer;
+}
+.date-picker-wrapper table .caption .next:hover,
+.date-picker-wrapper table .caption .prev:hover
+{
+	background-color:#ccc;
+	color:white;
+}
+.date-picker-wrapper .gap
+{
+	position:absolute;
+	display:none !important;
+	top:0px;
+	left:204px;
+	z-index: 1;
+	width:15px;
+	height: 100%;
+	background-color:red;
+	font-size:0;
+	line-height:0;
+}
+.date-picker-wrapper .gap .gap-lines { display: none;height: 100%; overflow:hidden; }
+.date-picker-wrapper .gap .gap-line { height:15px;width:15px; position:relative;  }
+.date-picker-wrapper .gap .gap-line .gap-1 { z-index:1; height:0; border-left:8px solid white; border-top:8px solid #eee;border-bottom:8px solid #eee; }
+.date-picker-wrapper .gap .gap-line .gap-2 { position:absolute; right:0; top:0px; z-index:2; height:0; border-left:8px solid transparent; border-top:8px solid white; }
+.date-picker-wrapper .gap .gap-line .gap-3 { position:absolute; right:0; top:8px; z-index:2; height:0; border-left:8px solid transparent; border-bottom:8px solid white; }
+.date-picker-wrapper .gap .gap-top-mask { width: 6px; height:1px; position:absolute; top: -1px; left: 1px; background-color: #eee; z-index:3; }
+.date-picker-wrapper .gap .gap-bottom-mask { width: 6px; height:1px; position:absolute; bottom: -1px; left: 7px; background-color: #eee; z-index:3; }
+
+.date-picker-wrapper .selected-days
+{
+	display:none;
+}
+.date-picker-wrapper .drp_top-bar
+{
+	line-height:40px;
+	height:0px;
+	position:relative;
+}
+.date-picker-wrapper .drp_top-bar .error-top { display:none; }
+.date-picker-wrapper .drp_top-bar .normal-top { display:none; }
+.date-picker-wrapper .drp_top-bar .default-top { display:block; display: none;}
+
+.date-picker-wrapper .drp_top-bar .error .default-top { display:none; }
+.date-picker-wrapper .drp_top-bar .error .error-top { display:block; color:red; }
+
+.date-picker-wrapper .drp_top-bar .normal .default-top { display:none; }
+.date-picker-wrapper .drp_top-bar .normal .normal-top { display:block; }
+
+.date-picker-wrapper .drp_top-bar .apply-btn
+{
+	display: none;
+	position:absolute;
+	right: 0px; 
+	top: 6px;
+	padding:3px 5px;
+	margin:0;
+	font-size:12px;
+	border-radius:4px;
+	cursor:pointer;
+	
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+	color:white;
+}
+
+.date-picker-wrapper .drp_top-bar .apply-btn.disabled
+{
+	cursor: pointer;
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+/*time styling*/
+.time {
+	position: relative;
+}
+.time input[type=range] {
+  vertical-align: middle;
+}
+.time1, .time2 {
+	width: 180px;
+	padding: 0 5px;
+	text-align: center;
+}
+.time1 {
+	float: left;
+}
+.time2 {
+	float: right;	
+}
+.hour, .minute {
+	text-align: right;
+}
+.hide {
+	display: none;
+}
+.week_name_title thead th {
+	font-weight: 400;
+	color: #ffffff;
+}
